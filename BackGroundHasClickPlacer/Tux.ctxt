@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Tux
+comment0.text=\r\n\ This\ is\ Tux.\r\n\ Tux\ says\ HI.\r\n\ Tux\ likes\ to\ eat\ fish\ and\ pop\ balloons.\r\n\ \r\n\ @author\ Bennett\ Stice\ \r\n\ @version\ 10/28/2022\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ This\ gives\ Tux\ the\ ability\ to\ move\ and\ checks\ if\ it's\ touching\ another\ actor\ and\ either\ adds\ that\ to\ a\ total\ or\ ends\ the\ game.\r\n
+comment2.params=
+comment2.target=void\ checkKeyPress()
+comment2.text=\r\n\ This\ checks\ which\ key\ is\ pressed\ and\ moves\ Tux\ accordingly.\r\n
+comment3.params=
+comment3.target=void\ lookOut()
+comment3.text=\r\n\ This\ is\ constantly\ checking\ for\ if\ Tux\ is\ touching\ something.\ If\ he\ is,\ then\ it\ does\ some\ set\ actions.\ \r\n
+numComments=4

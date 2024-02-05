@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=BackGround
+comment0.text=\r\n\ Project\ 1\:\ Create\ a\ game\ where\ an\ actor\ has\ to\ go\ around\ collecting\ a\ \r\n\ certain\ amount\ of\ fish\ and\ balloons\ while\ avoiding\ bombs\r\n\ \r\n\ @author\ Bennett\ Stice\ \r\n\ @version\ 10/28/2022\r\n
+comment1.params=
+comment1.target=BackGround()
+comment1.text=\r\n\ This\ creates\ a\ world\ called\ BackGround\ that\ sets\ the\ size\ and\ shows\ the\ starting\ text.\ \r\n\ It\ also\ starts\ the\ game\ when\ s\ is\ pressed.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ This\ adds\ in\ the\ actors\ of\ the\ game\ when\ s\ is\ pressed.\r\n
+comment3.params=
+comment3.target=void\ deleteText()
+comment3.text=\r\n\ This\ deletes\ the\ starting\ text.\r\n
+comment4.params=
+comment4.target=void\ prepare()
+comment4.text=\r\n\ This\ runs\ the\ methods\ listed\ below\ to\ add\ in\ a\ specified\ amount\ of\ actors.\r\n
+comment5.params=
+comment5.target=void\ addBalloons()
+comment5.text=\r\n\ The\ following\ 4\ methods\ add\ in\ the\ actors\ in\ random\ locations\ using\ for\ loops.\r\n
+comment6.params=
+comment6.target=void\ addFish()
+comment7.params=
+comment7.target=void\ addBombs()
+comment8.params=
+comment8.target=void\ addTux()
+numComments=9
