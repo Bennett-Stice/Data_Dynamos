@@ -1,12 +1,17 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * World for vacuum, contains logic for creating the grid and conrtols.
+ * Write a description of class MyWorld here.
  * 
- * @author Matthew Hansen
- * @version 2/4/2024
+ * @author Gavin Richardson, Matthew Hansen
+ * @version 2/7/2024
  */
-public class VacuumWorld extends World {
+public class MyWorld extends World
+{
+    /**
+     * Constructor for objects of class MyWorld.
+     * 
+     */
     final private static int WIDTH = 600;
     final private static int HEIGHT = 400;
     //Pixel size
@@ -26,32 +31,15 @@ public class VacuumWorld extends World {
     //spacing between top left corners of rooms
     final private int spacingX;
     final private int spacingY;
+
+    private int dirtAmount = 0;
+    
     /**
-     * Empty constructor for objects of class VacuumWorld.
-     * 
+     * Empty constructor for class VacuumWorld. This is the default greenfoot will use.
      */
-    public VacuumWorld() {
-        super(WIDTH, HEIGHT, PIXEL);
-        
-        gridRows = 3;
-        gridCols = 3;
-        
-        gridXStart = 100;
-        gridYStart = 100;
-        
-        spacingX = 100;
-        spacingY = 100;
-        
-        for(int r = 0; r<gridRows; r++){
-            for(int c = 0; c<gridRows; c++){
-                addObject(new Room(), gridXStart+(r*spacingX), gridYStart+(c*spacingY));
-            }
-        }
-        
-        addObject(new Button(), MENU_X+50, 100); 
-        showText("Start", MENU_X+50, 100);
-        addObject(new Button(), MENU_X+50, 200);
-        showText("Randomize Dirt", MENU_X+50, 200);
+    public MyWorld()
+    {    
+        this(3,3, 100, 100, 100, 100);
     }
     
     /**
@@ -63,18 +51,18 @@ public class VacuumWorld extends World {
      * @param grid_start_x x coordinate of the top left corner of the top left room
      * @param grid_start_y y coordinate of the top left corner of the top left room
      */
-    public VacuumWorld(int rows, int cols, int x_spacing, int y_spacing, int grid_start_x, int grid_start_y) {
+    public MyWorld(int rows, int cols, int x_spacing, int y_spacing, int grid_start_x, int grid_start_y) {
         super(WIDTH, HEIGHT, PIXEL);
         
         gridRows = rows;
         gridCols = cols;
         
-        gridXStart = 100;
-        gridYStart = 100;
+        gridXStart = grid_start_x;
+        gridYStart = grid_start_y;
         
         spacingX = x_spacing;
         spacingY = y_spacing;
-        
+
         for(int r = 0; r<gridRows; r++){
             for(int c = 0; c<gridRows; c++){
                 addObject(new Room(), gridXStart+(r*spacingX), gridYStart+(c*spacingY));
@@ -85,6 +73,8 @@ public class VacuumWorld extends World {
         showText("Start", MENU_X+50, 100);
         addObject(new Button(), MENU_X+50, 200);
         showText("Randomize Dirt", MENU_X+50, 200);
+        
+        //calls the prepare method
     }
     
     /**
@@ -105,11 +95,43 @@ public class VacuumWorld extends World {
     public int[] getRoomPos(int roomRow, int roomCol){
         return new int[] {gridXStart + roomRow*spacingX, gridYStart + roomCol*spacingY};
     }
+    
+    public void act()
+    {
+        /*
+         * code given to spawn everything
+         */
+
+        if(Greenfoot.mouseClicked(this))
+        {
+            MouseInfo mouse = Greenfoot.getMouseInfo();
+            if (mouse != null)
+            {
+                int xLoc=mouse.getX();
+                int yLoc=mouse.getY();
+                Dirt dirty = new Dirt();
+                addObject (dirty,xLoc, yLoc);
+                dirtAmount = dirtAmount +1;
+            }
+        }
+        
+        //ONCE START BUTTON IS CODED, VACUUM NEEDS TO BE ADDED
+
+    }
+    public int getDirt()
+    {
+        return dirtAmount;
+    }
+    private void addDirt()
+    {
+        //creates the balloons object and spawns it in randomly
+        Dirt dirt = new Dirt();
+        addObject(dirt, Greenfoot.getRandomNumber(699)+1, Greenfoot.getRandomNumber(499)+1);
+    }
+    private void addVacuum()
+    {
+        //creates the tux object and spawns him at his constant spawn point
+        Vacuum vacuum = new Vacuum();
+        addObject(vacuum, gridXStart-50, gridYStart-50);
+    }
 }
-
-
-
-
-
-
-
