@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Room collectable. Adds to balloon score on pickup.
+ * Write a description of class Room here.
  * 
- * @author Matthew Hansen
- * @version 10/26/21
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class Room extends Actor
 {
