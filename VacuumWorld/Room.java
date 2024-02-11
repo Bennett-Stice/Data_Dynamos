@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Room here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matt Hansen
+ * @version 2/11/2024
  */
 public class Room extends Actor
 {
