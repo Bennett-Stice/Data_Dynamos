@@ -16,7 +16,7 @@ public class Button extends Actor
     {
         if (Greenfoot.mouseClicked(this))
         {
-            
+            //move(10);
         }
     }
 }

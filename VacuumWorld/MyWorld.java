@@ -34,6 +34,8 @@ public class MyWorld extends World
 
     private int dirtAmount = 0;
     
+    private boolean started = false; // Variable to track if the game has started
+    
     /**
      * Empty constructor for class VacuumWorld. This is the default greenfoot will use.
      */
@@ -74,6 +76,8 @@ public class MyWorld extends World
         addObject(new Button(), MENU_X+50, 200);
         showText("Randomize Dirt", MENU_X+50, 200);
         
+        addVacuum();
+        
         //calls the prepare method
     }
     
@@ -106,11 +110,25 @@ public class MyWorld extends World
     
     public void act()
     {
+        /*if (!started) {
+            // If the game has not started yet, check for clicks on any button
+            if (Greenfoot.mouseClicked(null)) {
+                Actor clickedActor = Greenfoot.getMouseInfo().getActor();
+                if (clickedActor instanceof Button) {
+                    // If any button is clicked, start the game
+                    addVacuum();
+                    started = true;
+                }
+            }
+        } else {
+            // If the game has started, call the act method of Vacuum
+            getObjects(Vacuum.class).forEach(Vacuum::act);
+        }*/
         /*
          * code given to spawn everything
          */
 
-        if(Greenfoot.mouseClicked(this))
+        /*if(Greenfoot.mouseClicked(this))
         {
             MouseInfo mouse = Greenfoot.getMouseInfo();
             if (mouse != null)
@@ -123,19 +141,19 @@ public class MyWorld extends World
             }
         }
         
-        //ONCE START BUTTON IS CODED, VACUUM NEEDS TO BE ADDED
+        //ONCE START BUTTON IS CODED, VACUUM NEEDS TO BE ADDED*/
 
     }
     public int getDirt()
     {
         return dirtAmount;
     }
-    private void addDirt()
+    /*private void addDirt()
     {
         //creates the balloons object and spawns it in randomly
         Dirt dirt = new Dirt();
         addObject(dirt, Greenfoot.getRandomNumber(699)+1, Greenfoot.getRandomNumber(499)+1);
-    }
+    }*/
     private void addVacuum()
     {
         //creates the tux object and spawns him at his constant spawn point
