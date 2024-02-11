@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Button extends Actor
+public abstract class Button extends Actor
 {
     /**
      * Act - do whatever the Button wants to do. This method is called whenever
@@ -17,6 +17,10 @@ public class Button extends Actor
         if (Greenfoot.mouseClicked(this))
         {
             //move(10);
+            onClick();
         }
+        
     }
+    
+     abstract void onClick();
 }

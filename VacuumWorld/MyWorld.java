@@ -71,9 +71,9 @@ public class MyWorld extends World
             }
         }
         
-        addObject(new Button(), MENU_X+50, 100); 
+        addObject(new StartButton(), MENU_X+50, 100); 
         showText("Start", MENU_X+50, 100);
-        addObject(new Button(), MENU_X+50, 200);
+        addObject(new RandomizerButton(), MENU_X+50, 200);
         showText("Randomize Dirt", MENU_X+50, 200);
         
         addVacuum();
@@ -160,4 +160,15 @@ public class MyWorld extends World
         Vacuum vacuum = new Vacuum();
         addObject(vacuum, gridXStart-50, gridYStart-50);
     }
+    
+    public boolean getStarted(){
+        return started;
+    }
+    
+    public void setStarted(boolean start){
+        started = start;
+    }
+    
+    
+
 }
