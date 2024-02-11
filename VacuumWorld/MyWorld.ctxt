@@ -4,6 +4,8 @@ comment0.text=\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\n\ \n\ @autho
 comment1.params=
 comment1.target=MyWorld()
 comment1.text=\n\ Empty\ constructor\ for\ class\ VacuumWorld.\ This\ is\ the\ default\ greenfoot\ will\ use.\n
+comment10.params=start
+comment10.target=void\ setStarted(boolean)
 comment2.params=rows\ cols\ x_spacing\ y_spacing\ grid_start_x\ grid_start_y
 comment2.target=MyWorld(int,\ int,\ int,\ int,\ int,\ int)
 comment2.text=\n\ Constructor\ for\ different\ grid\ sizes\ for\ objects\ of\ class\ VacuumWorld.\n\ @param\ rows\ number\ of\ rows\ of\ rooms\n\ @param\ cols\ number\ of\ columns\ of\ rooms\n\ @param\ x_spacing\ horizontal\ spacing\ of\ rooms\n\ @param\ y_spacing\ vertical\ spacing\ of\ rooms\n\ @param\ grid_start_x\ x\ coordinate\ of\ the\ top\ left\ corner\ of\ the\ top\ left\ room\n\ @param\ grid_start_y\ y\ coordinate\ of\ the\ top\ left\ corner\ of\ the\ top\ left\ room\n
@@ -23,4 +25,6 @@ comment7.target=int\ getDirt()
 comment8.params=
 comment8.target=void\ addVacuum()
 comment8.text=private\ void\ addDirt()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ //creates\ the\ balloons\ object\ and\ spawns\ it\ in\ randomly\n\ \ \ \ \ \ \ \ Dirt\ dirt\ \=\ new\ Dirt();\n\ \ \ \ \ \ \ \ addObject(dirt,\ Greenfoot.getRandomNumber(699)+1,\ Greenfoot.getRandomNumber(499)+1);\n}
-numComments=9
+comment9.params=
+comment9.target=boolean\ getStarted()
+numComments=11
