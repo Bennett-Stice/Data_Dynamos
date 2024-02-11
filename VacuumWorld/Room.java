@@ -45,4 +45,8 @@ public class Room extends Actor
         else
             addDirt();
     }
+    
+    public boolean hasDirt(){
+        return hasDirt;
+    }
 }
