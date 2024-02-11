@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Button here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * 
+ * @author Matt Hansen, Justin Pawlowski
+ * @version 2/11/2024
  */
 public abstract class Button extends Actor
 {
@@ -16,7 +16,6 @@ public abstract class Button extends Actor
     {
         if (Greenfoot.mouseClicked(this))
         {
-            //move(10);
             onClick();
         }
         
