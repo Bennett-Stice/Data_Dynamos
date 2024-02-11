@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Vacuum
 comment0.text=\n\ Write\ a\ description\ of\ class\ Vacuum\ here.\n\ \n\ @author\ Matt\ Hansen,\ Gavin\n\ @version\ 2/11/2024\n
-comment1.params=
-comment1.target=Vacuum()
+comment1.params=room
+comment1.target=Vacuum(int)
 comment1.text=\n\ Empty\ constructor\ for\ class\ VacuumWorld.\ This\ is\ the\ default\ greenfoot\ will\ use.\n
 comment2.params=world
 comment2.target=void\ addedToWorld(greenfoot.World)

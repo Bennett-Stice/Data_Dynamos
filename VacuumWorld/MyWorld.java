@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
 /**
  * Write a description of class MyWorld here.
@@ -65,8 +66,8 @@ public class MyWorld extends World
         spacingX = x_spacing;
         spacingY = y_spacing;
 
-        for(int r = 0; r<gridRows; r++){
-            for(int c = 0; c<gridRows; c++){
+        for(int c = 0; c<gridCols; c++){
+            for(int r = 0; r<gridRows; r++){
                 addObject(new Room(), gridXStart+(r*spacingX), gridYStart+(c*spacingY));
             }
         }
@@ -99,6 +100,12 @@ public class MyWorld extends World
     public int[] getRoomPos(int roomRow, int roomCol){
         return new int[] {gridXStart + roomRow*spacingX, gridYStart + roomCol*spacingY};
     }
+    
+    public Room getRoomAtIndex(int index){
+        List<Room> rooms = getObjects(Room.class);
+        return rooms.get(index);
+    }
+    
     
     /**
      * Gets room count
@@ -157,8 +164,9 @@ public class MyWorld extends World
     private void addVacuum()
     {
         //creates the tux object and spawns him at his constant spawn point
-        Vacuum vacuum = new Vacuum();
-        addObject(vacuum, gridXStart-50, gridYStart-50);
+        Vacuum vacuum = new Vacuum(0);
+        int[] coords = getRoomPos(0);
+        addObject(vacuum, coords[0], coords[1]);
     }
     
     public boolean getStarted(){
