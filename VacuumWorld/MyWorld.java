@@ -79,6 +79,8 @@ public class MyWorld extends World
         
         addVacuum();
         
+        setPaintOrder(Vacuum.class, Dirt.class, Room.class);
+        
         //calls the prepare method
     }
     
@@ -163,9 +165,9 @@ public class MyWorld extends World
     }*/
     private void addVacuum()
     {
-        //creates the tux object and spawns him at his constant spawn point
-        Vacuum vacuum = new Vacuum(0);
-        int[] coords = getRoomPos(0);
+        int startPos = 0;
+        Vacuum vacuum = new Vacuum(startPos);
+        int[] coords = getRoomPos(startPos);
         addObject(vacuum, coords[0], coords[1]);
     }
     
