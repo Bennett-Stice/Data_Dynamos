@@ -96,6 +96,14 @@ public class MyWorld extends World
         return new int[] {gridXStart + roomRow*spacingX, gridYStart + roomCol*spacingY};
     }
     
+    /**
+     * Gets room count
+     * @return Number of rooms in the grid
+     */
+    public int getRoomCount(){
+        return gridRows*gridCols;
+    }
+    
     public void act()
     {
         /*
