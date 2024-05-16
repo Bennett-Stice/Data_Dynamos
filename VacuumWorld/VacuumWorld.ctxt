@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=VacuumWorld
+comment0.text=\r\n\ World\ for\ vacuum,\ contains\ logic\ for\ creating\ the\ grid\ and\ conrtols.\r\n\ \r\n\ @author\ Matthew\ Hansen\r\n\ @version\ 2/4/2024\r\n
+comment1.params=
+comment1.target=VacuumWorld()
+comment1.text=\r\n\ Empty\ constructor\ for\ objects\ of\ class\ VacuumWorld.\r\n\ \r\n
+comment2.params=rows\ cols\ x_spacing\ y_spacing\ grid_start_x\ grid_start_y
+comment2.target=VacuumWorld(int,\ int,\ int,\ int,\ int,\ int)
+comment2.text=\r\n\ Constructor\ for\ different\ grid\ sizes\ for\ objects\ of\ class\ VacuumWorld.\r\n\ @param\ rows\ number\ of\ rows\ of\ rooms\r\n\ @param\ cols\ number\ of\ columns\ of\ rooms\r\n\ @param\ x_spacing\ horizontal\ spacing\ of\ rooms\r\n\ @param\ y_spacing\ vertical\ spacing\ of\ rooms\r\n\ @param\ grid_start_x\ x\ coordinate\ of\ the\ top\ left\ corner\ of\ the\ top\ left\ room\r\n\ @param\ grid_start_y\ y\ coordinate\ of\ the\ top\ left\ corner\ of\ the\ top\ left\ room\r\n
+comment3.params=roomNum
+comment3.target=int[]\ getRoomPos(int)
+comment3.text=\r\n\ Gets\ room\ position\ for\ the\ specified\ room\ number\ (starting\ at\ index\ 0)\r\n\ @param\ roomNum\ Room\ number,\ starting\ from\ top\ left\r\n\ @return\ An\ array\ of\ the\ x\ and\ y\ position\ of\ the\ room's\ top\ left\ corner\r\n
+comment4.params=roomRow\ roomCol
+comment4.target=int[]\ getRoomPos(int,\ int)
+comment4.text=\r\n\ Gets\ room\ position\ for\ the\ specified\ room\ number\ (starting\ at\ index\ 0)\r\n\ @param\ roomRow\ Room's\ row\ in\ the\ grid\r\n\ @param\ roomCol\ Room's\ column\ in\ the\ grid\r\n\ @return\ An\ array\ of\ the\ x\ and\ y\ position\ of\ the\ room's\ top\ left\ corner\r\n
+numComments=5
